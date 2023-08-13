@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Раскрывающийся сайдбар</title>
+  <style>
+    /* Стили для сайдбара */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100px; /* Начальная ширина в скрытом виде */
+      background-color: #f1f1f1;
+      padding: 10px;
+      transition: width 0.3s; /* Анимация изменения ширины */
+    }
+
+    /* Стили для заголовков */
+    .widget-header {
+      cursor: pointer;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    /* Стили для скрытия виджетов по умолчанию */
+    .hidden {
+      display: none;
+    }
+
+    /* Стили для таблицы */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+
+    /* Стили для контейнера с квадратами */
+    .container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 200px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Стили для отображения контейнера */
+    .container.visible {
+      display: block;
+    }
+
+    /* Стили для квадратов */
+    .square {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      display: inline-block;
+      padding: 10px;
+      text-align: left;
+    }
+
+    /* Цвета квадратов */
+    .red {
+      background-color: red;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+    .active {
+      background-color:#fe9a9a;
+    }
+     /* Стили для изменения цвета текста "Цех" при нажатии */
+    .red-text {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <!-- Сайдбар -->
+  <div class="sidebar" id="sidebar">
+    <!-- Виджет "Домой" -->
+    <div class="widget-header" onclick="toggleWidget('home')">Домой</div>
+    <div class="widget-content hidden" id="home">
+       <a href="Test.html" id="rentLink">Аренда</a>
+      Содержимое виджета "Домой"
+    </div>
+
+
+    <!-- Виджет "Цех" -->
+<div  class="widget-header"  id="workshop" onclick="toggleWorkshops('workshop')">Цех</div >
+<div class="widget-content hidden" > тект
+</div>
+
+    <!-- Виджет "Задания" -->
+    <div class="widget-header"  id="tasks" onclick="showTable('tasks')">Задания</div>
+    <div class="widget-content hidden" >
+    </div>
+  </div>
+
+  <!-- Контейнер для таблицы -->
+  <div class="container" id="tableContainer">
+    <table>
+      <thead>
+        <tr>
+          <th>Закон</th>
+          <th>Номер контракта</th>
+          <th>Тип аукциона</th>
+          <th>Описание</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>44-ФЗ</td>
+          <td>№0372200034823000016</td>
+          <td>Электронный аукцион</td>
+          <td>Поставка аптечек в 2023г.</td>
+        </tr>
+        <!-- Дополнительные строки данных из CSV -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Контейнер для квадратов с информацией о цехах -->
+  <div class="container hidden" id="workshopContainer">
+    <div class="square red">Цех 1 - 26 сотрудников</div>
+    <div class="square green">Цех 2 - 36 сотрудников</div>
+    <div class="square yellow">Цех 3 - 46 сотрудников</div>
+  </div>
+
+  <!-- Скрипт для отображения/скрытия виджетов при клике на заголовок -->
+  <script src="scripts.js"></script>
+
+
+
+</body>
+</html>

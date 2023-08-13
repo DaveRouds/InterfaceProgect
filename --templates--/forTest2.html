@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Выставка</title>
+</head>
+<body>
+    <!-- Поместите сюда содержимое первой страницы -->
+    <h1>Страница 1</h1>
+</body>
+<script>
+    // Функция для переключения страниц
+      function switchPage() {
+        const pages = {{ pages_list | tojson | safe }};
+        let currentIndex = 0;
+
+        function showPage(index) {
+            // Загружаем страницу с помощью AJAX и помещаем ее содержимое в тег body текущего документа
+            fetch(pages[index])
+                .then(response => response.text())
+                .then(html => document.body.innerHTML = html)
+                .catch(error => console.error('Ошибка загрузки страницы:', error));
+        }
+
+        function next() {
+            currentIndex = (currentIndex + 1) % pages.length  ;
+            showPage(currentIndex);
+        }
+
+        // Запускаем переключение каждые 5 секунд
+        setInterval(next,20000);
+    }
+
+    // Запускаем функцию переключения страниц после загрузки текущего документа
+    document.addEventListener('DOMContentLoaded', switchPage);
+
+
+
+</script>
+</html>

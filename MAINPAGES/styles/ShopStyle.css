@@ -1,0 +1,421 @@
+header{
+    width: 100%;
+    justify-content: flex-end;
+    height: 70px;
+
+}
+
+footer{
+    width: 100%;
+    justify-content: center;
+    background-color: #715CEE;
+}
+
+body{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.display_flex{
+    display: flex;
+}
+
+.navStyle{
+    padding-right: 2%;
+    align-items: center;
+    gap: 35px;
+}
+
+.photoCircle{
+    width: 60px;
+    height: 60px;
+    content: url(../img/userProf.avif);
+    border-radius: 50%;
+}
+
+.profileBox{
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    background-color: transparent;
+  }
+
+.dropdown .buttonHeader{
+    background-color: transparent;
+    font-size: 24px;
+    color:#f9f9f9;
+    border: 0px;
+    font-family: 'Roboto Flex', sans-serif;
+    width: 115%;
+}
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    border-radius: 20px;
+    color: black;
+    z-index: 1;
+    width: 80%;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown:hover .dropdown-content a{
+    text-decoration:none;
+  }
+
+  .findInput{
+    width: 350px;
+    height: 45px;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    font-size: 28px;
+    padding-left: 8%;
+  }
+
+  .icon{
+    background-image: url('../svg/search.svg');
+    background-repeat:no-repeat;
+    background-position:0 center;
+  }
+
+  .findInput::placeholder{
+    padding-left: 0%;
+    font-size: 32px;
+    color: black;
+    font-family: 'Roboto Flex', sans-serif;
+  }
+
+  .backGroundSwitch{
+    width: 80px;
+    height: 40px;
+
+    background: linear-gradient(270deg, #F7FEFF 0%, rgba(247, 254, 255, 0.723958) 0.01%, rgba(247, 254, 255, 0.365786) 65.86%, rgba(247, 254, 255, 0) 104.5%);
+    border-radius: 100px;
+  }
+
+  .whiteElipse{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    left: 40px;
+    position: relative;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear; /** Chrome & Safari **/
+    -moz-transition: all 0.5s linear; /** Firefox **/
+    -o-transition: all 0.5s linear; /** Opera **/
+  }
+
+/*
+  .mainPosition{
+    justify-content: flex-end;
+  }
+*/
+.mainField {
+    display: flex;
+    position: relative;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 1920px;
+    max-height: 1080px;
+    min-height: 640px;
+    min-width: 1180px;
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 90%;
+    height: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+.topBar{
+    padding: 10px;
+    gap: 25px;
+    height: 5%;
+    display: inline-flex;
+    width: 100%;
+}
+
+.inputBar{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 23px;
+
+}
+
+.Tsekh{
+    background-color: transparent;
+    font-size: 24px;
+    color: black;
+    border: 0px;
+    font-family: 'Roboto Flex', sans-serif;
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Tsekh::after{
+    content: url(../svg/chevron-down.svg);
+    height: 0px;
+    scale: 0.8;
+}
+
+.TsekhBox {
+    width: 160px;
+    background-color: white;
+    border-radius: 20px;
+    height: 30px;
+}
+
+.closeCircle{
+ width: 20px;
+ height: 20px;
+ border-radius: 50%;
+}
+
+
+.closeModal {
+	position: relative;
+    width: 24px;
+    top: -4.5px;
+    right: 10px;
+    height: 24px;
+    opacity: 1;
+    scale: 0.5;
+    cursor: pointer;
+    transition: opacity ease 0.5s;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.closeModal::before,
+.closeModal::after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	display: block;
+	width: 24px;
+	height: 3px;
+	background: #000;
+}
+
+.closeModal::before {
+	transform: rotate(45deg);
+}
+
+.closeModal::after {
+	transform: rotate(-45deg);
+}
+
+.equipment№{
+    width: 390PX;
+    background-color: white;
+    border-radius: 20px;
+    height: 30px;
+    border:  0px;
+    font-size: 20px;
+    text-align: -webkit-center;
+}
+
+.equipment№::placeholder{
+    top: 15px;
+    font-size: 24px;
+    color: #000;
+    transform: translateY(2px);
+}
+
+.Boss{
+    background-color: transparent;
+    font-size: 24px;
+    color: black;
+    border: 0px;
+    font-family: 'Roboto Flex', sans-serif;
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Boss::after{
+    content: url(../svg/chevron-down.svg);
+    height: 0px;
+    scale: 0.8;
+}
+
+.BossBox {
+    width: 260px;
+    background-color: white;
+    border-radius: 20px;
+    height: 30px;
+}
+
+.subInputBar{
+    width: 63.5%;
+    padding-left: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Tsekh№{
+    display: inline-block;
+}
+
+.Employee{
+    background-color: transparent;
+    font-size: 24px;
+    color: black;
+    border: 0px;
+    font-family: 'Roboto Flex', sans-serif;
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Employee::after{
+    content: url(../svg/chevron-down.svg);
+    height: 0px;
+    scale: 0.8;
+}
+
+.EmployeeBox {
+    width: 260px;
+    background-color: white;
+    border-radius: 20px;
+    height: 30px;
+}
+
+
+.chooseButton{
+    width: 100px;
+    background-color: white;
+    border-radius: 20px;
+    height: 30px;
+    font-size: 20px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.TsekhMap{
+    width: 92%;
+    padding: 20px;
+    height: 570px;
+    background-color: transparent;
+    border: 10px solid #D9D9D9;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.equipmentIcon{
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    font-size: 30px;
+}
+
+.equipmentIcon:hover{
+    opacity: 0.8;
+}
+
+.backGround-color-red{
+    background-color: #FB6161;
+}
+
+.backGround-color-yellow{
+    background-color: #FEF406;
+}
+
+.backGround-color-green{
+    background-color: #71DC7B;
+}
+
+.backGround-color-grey{
+    background-color: #EBE7E7;
+}
+
+.lineOfEquipment{
+    display: flex;
+    flex-direction: row;
+    height: 82px;
+    gap: 61.5px;
+    width: 100%;
+}
+
+.TsekhMap .lineOfEquipment:nth-child(2){
+
+    .equipmentIcon:nth-child(2){
+        margin-left: 54vh;
+    }
+
+}
+
+.TsekhMap .lineOfEquipment:nth-child(3){
+
+    .equipmentIcon:nth-child(2){
+        margin-left: 27vh;
+    }
+
+}
+
+.TsekhMap .lineOfEquipment:nth-child(4){
+
+    .equipmentIcon:nth-child(1){
+        margin-left: 27vh;
+    }
+
+}
+
+  .foot{
+    width: 1350px;
+    height: 16.2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.firstBlock{
+    color: white;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+}
+
+  .secondBlock{
+    scale: 1;
+    width: 20%;
+  }
+
+.thirdBlock{
+    color: white;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+    display: inline-block;
+    width: 30vh;
+}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Выставка</title>
+</head>
+<body>
+    <!-- Поместите сюда содержимое первой страницы -->
+    <h1>Страница 1</h1>
+</body>
+<script>
+    // Функция для переключения страниц
+  async function switchPage() {
+    const pages = {{ pages_list | tojson | safe }};
+    const pageContents = [];
+
+    async function fetchPage(page) {
+        try {
+            const response = await fetch(page);
+            const html = await response.text();
+            pageContents.push(html);
+        } catch (error) {
+            console.error(`Ошибка загрузки страницы ${page}:`, error);
+        }
+    }
+
+    // Загружаем все страницы сразу
+    await Promise.all(pages.map(fetchPage));
+
+    let currentIndex = 0;
+
+    function showPage(index) {
+        document.body.innerHTML = pageContents[index];
+    }
+
+    function next() {
+        currentIndex = (currentIndex + 1) % pages.length;
+        showPage(currentIndex).then(() => {
+        console.log("currentIndex:", currentIndex);
+        console.log("pages.length:", pages.length);
+    });
+    }
+
+    // Запускаем переключение каждые 5 секунд
+    setInterval(next, 3000);
+
+    // Изначально отображаем первую страницу
+    showPage(currentIndex);
+}
+
+
+
+    // Запускаем функцию переключения страниц после загрузки текущего документа
+    document.addEventListener('DOMContentLoaded', switchPage);
+</script>
+</html>

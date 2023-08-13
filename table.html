@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Страница с автоматическим показом сообщения</title>
+<style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .button-container {
+      text-align: center;
+    }
+    .message {
+      display: none;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+   table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      cursor: pointer;
+    }
+
+    /* Стили для скрытия таблицы по умолчанию */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<table>
+<thead>
+<tr>
+<th onclick="toggleTable()">Закон</th>
+<th>Номер контракта</th>
+<th>Тип аукциона</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody class="hidden" id="data">
+<!-- Здесь будут вставлены данные из CSV -->
+<tr>
+<td>44-ФЗ</td>
+<td>№0372200034823000016</td>
+<td>Электронный аукцион</td>
+<td>Поставка аптечек в 2023г.</td>
+</tr>
+<!-- Дополнительные строки данных из CSV -->
+<tr><td>44-ФЗ</td><td>№0372200034823000016</td><td>Электронный аукцион</td><td>Поставка аптечек в 2023г.</td></tr><tr><td>44-ФЗ</td><td>№0372200034823000017</td><td>Электронный аукцион</td><td>Поставка металла для учебного процесса в 2023г.</td></tr><tr><td>44-ФЗ</td><td>№0124200000623004667</td><td>Электронный аукцион</td><td>Поставка ученического токарного комплекса</td></tr><tr><td>44-ФЗ</td><td>№0372200034823000018</td><td>Открытый конкурс в электронной форме</td><td>Поставка стеллажей.</td></tr><tr><td>44-ФЗ</td><td>№0372200034823000015</td><td>Открытый конкурс в электронной форме</td><td>Оказание услуг по организации питания обучающихся в СПб ГБПОУ КСиПТ в 2023-2025 году.</td></tr><tr><td>44-ФЗ</td><td>№0320100018723000197</td><td>Электронный аукцион</td></tr></tbody>
+</table>
+<h1> BUTTON TEST</h1>
+<div class="button-container">
+<button id="myButton">Нажми на меня!</button>
+<div class="message" id="message">Кнопка нажата!</div>
+</div>
+<script>
+  function toggleTable() {
+      var tbody = document.getElementById('data');
+      if (tbody.classList.contains('hidden')) {
+        tbody.classList.remove('hidden');
+      } else {
+        tbody.classList.add('hidden');
+      }
+    }
+
+    // Открываем таблицу через 4 секунды
+    setTimeout(function() {
+      var tbody = document.getElementById('data');
+      tbody.classList.remove('hidden');
+    }, 4000);
+
+
+ function toggleTable() {
+      var tbody = document.getElementById('data');
+      if (tbody.classList.contains('hidden')) {
+        tbody.classList.remove('hidden');
+      } else {
+        tbody.classList.add('hidden');
+      }
+    }
+    function showMessage() {
+      var messageElement = document.getElementById('message');
+      messageElement.style.display = 'block';
+    }
+
+    // Показываем сообщение через 2 секунды после загрузки страницы
+    setTimeout(showMessage, 2000);
+  </script>
+
+</html>

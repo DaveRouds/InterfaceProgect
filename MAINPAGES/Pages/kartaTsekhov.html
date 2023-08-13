@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/ShopStyle.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&display=swap">
+    <title>Karta</title>
+</head>
+<body>
+
+
+
+ <!-- Сайдбар -->
+ <div class="sidebar" onclick="toggleSidebar(event)">
+  <img src="../img/logo.png" alt="Изображение">
+
+  <div class="icon-container">
+    <span class="circle"></span>
+
+    <img src="../img/home.png" alt="Иконка 1">
+    <span class="sidebar-text">Главная</span>
+    <span class="circle-2"></span>
+  </div>
+
+  <div class="icon-container"  onclick="toggleContainer('workshop-map-container')">
+    <span class="circle"></span>
+    <img src="../img/clipboard.png" alt="Иконка 2">
+    <span class="sidebar-text">Задания</span>
+     <span class="circle-2"></span>
+  </div>
+
+  <div class="icon-container">
+    <span class="circle"></span>
+    <img src="../img/file-text.png" alt="Иконка 3">
+    <span class="sidebar-text">Проекты</span>
+    <span class="circle-2"></span>
+  </div>
+  <div class="icon-container">
+    <span class="circle"></span>
+    <img src="../img/map.png" alt="Иконка 3">
+    <span class="sidebar-text">Карта цеха</span>
+    <span class="circle-2"></span>
+  </div>
+</div>
+   <!-- Аватарка и имя пользователя -->
+  <div class="user-profile">
+     <div class="search-container">
+     <input type="text" class="search-input" placeholder="Поиск">
+       <img src="../img/search.png" alt="Картинка" class="search-icon"> <!-- Картинка -->
+    </div>
+    <img src="../img/settings.png" alt="Иконка настроек" class="settings-icon">
+    <img src="../img/avatar.png" alt="Аватар пользователя" class ="avatar">
+    <span class="user-name">Имя пользователя</span>
+    <img src="../img/chevron-down.png" alt="Иконка шеврон" class="chevron-icon">
+
+  </div>
+
+
+    <!--Основной блок-->
+    <div class="workshop-map-container" id="workshop-map-container">
+        <div class="mainField">
+            <div class="topBar">
+                <img src="./svg/menu.svg" alt="dots icon" id="sideMenu">
+                <img src="./svg/firstMicroBar.svg" alt="dots icon">
+                <img src="./svg/secondMicroBar.svg" alt="dots icon">
+            </div>
+            <!-- Вверхняя полоса-->
+            <div class="inputBar">
+                <div class="dropdown TsekhBox">
+                    <button class="Tsekh">Цех</button>
+                    <div class="dropdown-content display_flex">
+                      <a href="#" id="Tsekh_dropdown-content">Цех 1</a>
+                      <a href="#" id="Tsekh_dropdown-content">Цех 2</a>
+                      <a href="#" id="Tsekh_dropdown-content">Цех 3</a>
+                    </div>
+                </div>
+                <button class="closeCircle"><div class="closeModal"></div></button>
+
+                <input placeholder="Номер оборудования" class="equipment№">
+
+                <div class="dropdown BossBox">
+                    <button class="Boss">Начальник цеха</button>
+                    <div class="dropdown-content display_flex">
+                      <a href="#" id="Boss_dropdown-content">Пункт меню 1</a>
+                      <a href="#" id="Boss_dropdown-content">Пункт меню 2</a>
+                      <a href="#" id="Boss_dropdown-content">Пункт меню 3</a>
+                    </div>
+                </div>
+                <button class="chooseButton">Выбрать</button>
+            <!-- Вверхняя полоса-->
+
+            <!-- Второстепенная полоса-->
+            </div>
+            <div class="subInputBar">
+                <h2 class="Tsekh№">Цех №4</h2>
+                <div class="dropdown EmployeeBox">
+                    <button class="Employee">Сотрудник</button>
+                    <div class="dropdown-content display_flex">
+                      <a href="#" id="Employee_dropdown-content">Пункт меню 1</a>
+                      <a href="#" id="Employee_dropdown-content">Пункт меню 2</a>
+                      <a href="#" id="Employee_dropdown-content">Пункт меню 3</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Второстепенная полоса-->
+
+            
+            <!-- Карта схема -->
+            <div class="TsekhMap">
+                <div class="lineOfEquipment">
+                    <div class="equipmentIcon backGround-color-green">1</div>
+                    <div class="equipmentIcon backGround-color-yellow">2</div>
+                    <div class="equipmentIcon backGround-color-green">3</div>
+                    <div class="equipmentIcon backGround-color-grey">4</div>
+                    <div class="equipmentIcon backGround-color-grey">5</div>
+                    <div class="equipmentIcon backGround-color-green">6</div>
+                    <div class="equipmentIcon backGround-color-red">7</div>
+                    <div class="equipmentIcon backGround-color-yellow">8</div>
+                    <div class="equipmentIcon backGround-color-grey">9</div>
+                </div>
+
+                <div class="lineOfEquipment">
+                    <div class="equipmentIcon backGround-color-green">10</div>
+                    <div class="equipmentIcon backGround-color-yellow">11</div>
+                    <div class="equipmentIcon backGround-color-yellow">12</div>
+                    <div class="equipmentIcon backGround-color-red">13</div>
+                    <div class="equipmentIcon backGround-color-grey">14</div>
+                </div>
+
+                <div class="lineOfEquipment">
+                    <div class="equipmentIcon backGround-color-yellow">15</div>
+                    <div class="equipmentIcon backGround-color-grey">16</div>
+                </div>
+
+                <div class="lineOfEquipment">
+                    <div class="equipmentIcon backGround-color-grey">17</div>
+                    <div class="equipmentIcon backGround-color-green">18</div>
+                    <div class="equipmentIcon backGround-color-green">19</div>
+                    <div class="equipmentIcon backGround-color-red">20</div>
+                </div>
+            </div>
+            <!-- Карта схема -->
+        </div>
+
+    </div>
+
+    <!--Начало блока с проектами -->
+    <div class="workshop-map-container" id="Project-map-container">
+      <div class="display_flex mainPosition">
+        <div class="mainField">
+            <div class="topBar">
+              <img src="./svg/menu.svg" alt="dots icon" id="sideMenu">
+              <img src="./svg/firstMicroBar.svg" alt="dots icon">
+              <img src="./svg/secondMicroBar.svg" alt="dots icon">
+            </div>
+  
+            <!-- Вверхняя полоса-->
+            <div class="inputBar">
+                <div class="dropdown TsekhBox">
+                    <button class="Tsekh">Проекты</button>
+                    <div class="dropdown-content display_flex">
+                      <a href="#" id="Tsekh_dropdown-content">Проект 1</a>
+                      <a href="#" id="Tsekh_dropdown-content">Проект 2</a>
+                      <a href="#" id="Tsekh_dropdown-content">Проект 3</a>
+                    </div>
+                </div>
+                <button class="closeCircle"><div class="closeModal"></div></button>
+  
+                <input placeholder="Заказчик " class="equipment№">
+  
+                <div class="dropdown BossBox">
+                    <button class="Boss">Ответсвенный</button>
+                    <div class="dropdown-content display_flex">
+                      <a href="#" id="Boss_dropdown-content">Сотрудник 1</a>
+                      <a href="#" id="Boss_dropdown-content">Сотрудник 2</a>
+                      <a href="#" id="Boss_dropdown-content">Сотрудник 3</a>
+                    </div>
+                </div>
+                <button class="chooseButton">Выбрать</button>
+              
+  
+            </div>
+            <div class="ProjectMap">
+              <div class="lineOfProject">
+                <div class="ProjectIcon backGround-color-green">Проект 1</div>
+                <div class="ProjectIcon backGround-color-green"">Проект 2</div>
+                <div class="ProjectIcon backGround-color-yellow">Проект 3</div>
+                <div class="ProjectIcon backGround-color-red">Проект 4</div>
+                <div class="ProjectIcon backGround-color-green"">Проект 5</div>
+            </div>
+              <div class="lineOfProject">
+                <div class="ProjectIcon backGround-color-green">Проект 6</div>
+                <div class="ProjectIcon backGround-color-yellow">Проект 7</div>
+                <div class="ProjectIcon backGround-color-yellow">Проект 8</div>
+                <div class="ProjectIcon backGround-color-red">Проект 9</div>
+                <div class="ProjectIcon backGround-color-yellow">Проект 10</div>
+            </div>
+            <div class="lineOfProject">
+              <div class="ProjectIcon backGround-color-green">Проект 11</div>
+              <div class="ProjectIcon backGround-color-red">Проект 12</div>
+              <div class="ProjectIcon backGround-color-yellow">Проект 13</div>
+              <div class="ProjectIcon backGround-color-green">Проект 14</div>
+              <div class="ProjectIcon backGround-color-green">Проект 15</div>
+          </div>
+          <div class="lineOfProject">
+            <div class="ProjectIcon backGround-color-red">Проект 16</div>
+            <div class="ProjectIcon backGround-color-yellow">Проект 17</div>
+            <div class="ProjectIcon backGround-color-yellow">Проект 18</div>
+            <div class="ProjectIcon backGround-color-red">Проект 19</div>
+            <div class="ProjectIcon backGround-color-grey">Проект 20</div>
+        </div>
+        
+            </div>
+          </div>
+        </div>
+    </div>
+      <!-- Начало блока заданий -->
+  
+      <div class="workshop-map-container" id="Task-map-container">
+        <div class="topBar">
+          <img src="./svg/menu.svg" alt="dots icon" id="sideMenu">
+          <img src="./svg/firstMicroBar.svg" alt="dots icon">
+          <img src="./svg/secondMicroBar.svg" alt="dots icon">
+        </div>
+        
+        <div style="padding-top:2rem; padding-left: 3rem; display: flex;">
+          <div class="dropdown1">
+            <input class="dropbtn1" style="height: 2rem;" placeholder="Поиск">
+            <div class="dropdown-content1">
+            </div>
+          </div>
+          
+          <div class="dropdown1">
+            <button class="dropbtn1">Содержание</button>
+            <div class="dropdown-content1">
+            </div>
+          </div>
+          
+          <div class="dropdown1">
+            <button class="dropbtn1">Статус задачи</button>
+            <div class="dropdown-content1">
+              <a class="GreenTask chooseTask">Выполнено</a>
+              <a class="YellowTask chooseTask">Есть отчет</a>
+              <a class="RedTask chooseTask">Не выполнено</a>
+            </div>
+          </div>
+          
+          <div class="dropdown1">
+            <button class="dropbtn1">Категория</button>
+            <div class="dropdown-content1">
+              <a class="WhiteTask chooseTask">Категория 1</a>
+              <a class="WhiteTask chooseTask">Категория 2</a>
+              <a class="WhiteTask chooseTask">Категория 3</a>
+            </div>
+          </div>
+    
+          <div class="dropdown1">
+            <button class="dropbtn1">Выбрать</button>
+            <div class="dropdown-content1">
+            </div>
+          </div>
+        </div>
+        <div style="display: flex;">
+          <div class="TaskDiv">
+            <h1 class="TaskTitleText">Задачи</h1>
+            <div class="workshops1">
+              <div class="workshop1">
+                <ul>
+                  <li>
+                    <div class="TaskWorkShop workshop-title1">
+                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                      <p class="TaskBasicText">Цех №41</p>
+                    </div>
+                    <ul class="projects1">
+                      <li class="project1">
+                        <div class="TaskWorkShopList projects_name_list">
+                          <img src="../img/Arrowdown.png" alt="Arrowdown">
+                          <p class="TaskBasicText">Список задач</p>
+                        </div>
+                        <ul class="sub-projects1">
+                          <li class="sub-project1">
+                            <div class="TaskWorkShopTask tasks_name_list">
+                              <img src="../img/Arrowdown.png" alt="Arrowdown">
+                              <p class="TaskBasicText">Наименование задачи</p>
+                              <p class="TaskBasicText">Статус</p>
+                            </div>
+              
+                            <ul class="sub-task-projects1">
+                              <li class="sub-task-project1">
+                                <div class="TaskWorkShopTask info_name_list GreenTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 1</p>
+                                  <p class="TaskBasicText">Выполнено</p>
+                                </div>
+          
+                                <ul class="tasks-info">
+                                  <li class="task-info">
+                                    <div class="TaskWorkShopTask GrayInfo">
+                                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                      <p class="TaskBasicText">Описание задачи</p>
+                                      <p class="TaskBasicText">Срок выполнения</p>
+                                    </div>
+                                  </li>
+                                  <li class="task-info">
+                                    <div class="TaskWorkShopTask BlueInfo">
+                                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                      <p class="TaskBasicText">Подготовить отчёт</p>
+                                      <p class="TaskBasicText">11.05.2023</p>
+                                    </div>
+                                  </li>
+                                </ul>
+                            
+                                <div class="TaskWorkShopTask YellowTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 2</p>
+                                  <p class="TaskBasicText">Есть отчет</p>
+                                </div>
+                            
+                                <div class="TaskWorkShopTask RedTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 3</p>
+                                  <p class="TaskBasicText">Не выполнено</p>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+            
+              </div>
+            </div>
+          
+            <div class="workshops1">
+              <div class="workshop1">
+                <ul>
+                  <li>
+                    <div class="TaskWorkShop workshop-title1">
+                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                      <p class="TaskBasicText">Цех №42</p>
+                    </div>
+                    <ul class="projects1">
+                      <li class="project1">
+                        <div class="TaskWorkShopList projects_name_list">
+                          <img src="../img/Arrowdown.png" alt="Arrowdown">
+                          <p class="TaskBasicText">Список задач</p>
+                        </div>
+                        <ul class="sub-projects1">
+                          <li class="sub-project1">
+                            <div class="TaskWorkShopTask tasks_name_list">
+                              <img src="../img/Arrowdown.png" alt="Arrowdown">
+                              <p class="TaskBasicText">Наименование задачи</p>
+                            </div>
+              
+                            <ul class="sub-task-projects1">
+                              <li class="sub-task-project1">
+                                <div class="TaskWorkShopTask info_name_list GreenTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 1</p>
+                                </div>
+          
+                                <ul class="tasks-info">
+                                  <li class="task-info">
+                                    <div class="TaskWorkShopTask GrayInfo">
+                                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                      <p class="TaskBasicText">Описание задачи</p>
+                                    </div>
+                                  </li>
+                                  <li class="task-info">
+                                    <div class="TaskWorkShopTask BlueInfo">
+                                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                      <p class="TaskBasicText">Подготовить отчёт</p>
+                                    </div>
+                                  </li>
+                                </ul>
+                            
+                                <div class="TaskWorkShopTask YellowTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 2</p>
+                                </div>
+                            
+                                <div class="TaskWorkShopTask RedTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 3</p>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+            
+              </div>
+            </div>
+          
+            <div class="workshops1">
+              <div class="workshop1">
+                <ul>
+                  <li>
+                    <div class="TaskWorkShop workshop-title1">
+                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                      <p class="TaskBasicText">Цех №43</p>
+                    </div>
+                    <ul class="projects1">
+                      <li class="project1">
+                        <div class="TaskWorkShopList projects_name_list">
+                          <img src="../img/Arrowdown.png" alt="Arrowdown">
+                          <p class="TaskBasicText">Список задач</p>
+                        </div>
+                        <ul class="sub-projects1">
+                          <li class="sub-project1">
+                            <div class="TaskWorkShopTask tasks_name_list">
+                              <img src="../img/Arrowdown.png" alt="Arrowdown">
+                              <p class="TaskBasicText">Наименование задачи</p>
+                            </div>
+              
+                            <ul class="sub-task-projects1">
+                              <li class="sub-task-project1">
+                                <div class="TaskWorkShopTask info_name_list GreenTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 1</p>
+                                </div>
+          
+                                <ul class="tasks-info">
+                                  <li class="task-info">
+                                    <div class="TaskWorkShopTask GrayInfo">
+                                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                      <p class="TaskBasicText">Описание задачи</p>
+                                    </div>
+                                  </li>
+                                  <li class="task-info">
+                                    <div class="TaskWorkShopTask BlueInfo">
+                                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                      <p class="TaskBasicText">Подготовить отчёт</p>
+                                    </div>
+                                  </li>
+                                </ul>
+                            
+                                <div class="TaskWorkShopTask YellowTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 2</p>
+                                </div>
+                            
+                                <div class="TaskWorkShopTask RedTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 3</p>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+            
+              </div>
+            </div>
+          
+            <div class="workshops1">
+              <div class="workshop1">
+                <ul>
+                  <li>
+                    <div class="TaskWorkShop workshop-title1">
+                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                      <p class="TaskBasicText">Цех №17</p>
+                    </div>
+                    <ul class="projects1">
+                      <li class="project1">
+                        <div class="TaskWorkShopList projects_name_list">
+                          <img src="../img/Arrowdown.png" alt="Arrowdown">
+                          <p class="TaskBasicText">Список задач</p>
+                        </div>
+                        <ul class="sub-projects1">
+                          <li class="sub-project1">
+                            <div class="TaskWorkShopTask tasks_name_list">
+                              <img src="../img/Arrowdown.png" alt="Arrowdown">
+                              <p class="TaskBasicText">Наименование задачи</p>
+                            </div>
+              
+                            <ul class="sub-task-projects1">
+                              <li class="sub-task-project1">
+                                <div class="TaskWorkShopTask info_name_list GreenTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 1</p>
+                                </div>
+          
+                                <ul class="tasks-info">
+                                  <li class="task-info">
+                                    <div class="TaskWorkShopTask GrayInfo">
+                                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                      <p class="TaskBasicText">Описание задачи</p>
+                                    </div>
+                                  </li>
+                                  <li class="task-info">
+                                    <div class="TaskWorkShopTask BlueInfo">
+                                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                      <p class="TaskBasicText">Подготовить отчёт</p>
+                                    </div>
+                                  </li>
+                                </ul>
+                            
+                                <div class="TaskWorkShopTask YellowTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 2</p>
+                                </div>
+                            
+                                <div class="TaskWorkShopTask RedTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 3</p>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+            
+              </div>
+            </div>
+          
+            <div class="workshops1">
+              <div class="workshop1">
+                <ul>
+                  <li>
+                    <div class="TaskWorkShop workshop-title1">
+                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                      <p class="TaskBasicText">Цех №11</p>
+                    </div>
+                    <ul class="projects1">
+                      <li class="project1">
+                        <div class="TaskWorkShopList projects_name_list">
+                          <img src="../img/Arrowdown.png" alt="Arrowdown">
+                          <p class="TaskBasicText">Список задач</p>
+                        </div>
+                        <ul class="sub-projects1">
+                          <li class="sub-project1">
+                            <div class="TaskWorkShopTask tasks_name_list">
+                              <img src="../img/Arrowdown.png" alt="Arrowdown">
+                              <p class="TaskBasicText">Наименование задачи</p>
+                            </div>
+              
+                            <ul class="sub-task-projects1">
+                              <li class="sub-task-project1">
+                                <div class="TaskWorkShopTask info_name_list GreenTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 1</p>
+                                </div>
+          
+                                <ul class="tasks-info">
+                                  <li class="task-info">
+                                    <div class="TaskWorkShopTask GrayInfo">
+                                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                      <p class="TaskBasicText">Описание задачи</p>
+                                    </div>
+                                  </li>
+                                  <li class="task-info">
+                                    <div class="TaskWorkShopTask BlueInfo">
+                                      <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                      <p class="TaskBasicText">Подготовить отчёт</p>
+                                    </div>
+                                  </li>
+                                </ul>
+                            
+                                <div class="TaskWorkShopTask YellowTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 2</p>
+                                </div>
+                            
+                                <div class="TaskWorkShopTask RedTask">
+                                  <img src="../img/Arrowdown.png" alt="Arrowdown">
+                                  <p class="TaskBasicText">Задача 3</p>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+            
+              </div>
+            </div>
+          </div>
+          
+          <div class="TaskInfoDiv">
+            <div>
+              <h1 class="TaskTitleText">Исполнитель</h1>
+              <div class="TaskExecutorInfo">
+                <p>Имя</p>
+                <p>Статус</p>
+                <p>Должность</p>
+              </div>
+              <div class="TaskDataExecutorInfo">
+                <img src="../img/avatar.png" style="width: 40px; height: 40px;" alt="Изображение">
+                <p>Иванов Иван</p>
+                <p>Статус</p>
+                <p>Должность</p>
+              </div>
+            </div>
+        
+            <div>
+              <h1 class="TaskTitleText">Задача</h1>
+              <div class="TaskExecutorInfo">
+                <p>Описание</p>
+                <p>Статус</p>
+                <p>Дата</p>
+              </div>
+              <div class="TaskDataExecutorInfo">
+                <p>Подготовить документацию</p>
+                <p>Не выполнено</p>
+                <p>15.12.2023</p>
+              </div>
+            </div>
+        
+            <div class="textAreaDiv">
+              <h1 class="TaskTitleText">Комментарий</h1>
+              <textarea name="" id="" cols="45" rows="6"></textarea>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    
+  </div>
+  </div>
+
+
+
+
+</body>
+<!-- <script src="../scripts/DirectorScript.js"></script>
+<script src="../scripts/switchBackGround.js"></script>
+<script src="../scripts/TsechUpperBar.js"></script> -->
+<script src="scripts/DirectorScript.js"></script>
+<script src="scripts/scriptsShop.js"></script>
+<script src="scripts/WorkshopTask.js"></script> 
+</html>

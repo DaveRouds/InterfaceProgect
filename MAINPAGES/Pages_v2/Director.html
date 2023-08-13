@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DirectorShow</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/directorStyle_v2.css">
+  <link rel="stylesheet" href="../styles/style.css">
+
+
+
+</head>
+<body>
+<!-- логотипы -->
+  <div class="frame">
+    <img class="logo" src="../../img/logo.png" alt="Logo" >
+    <img class="logo-2" src="../../img/logo.png" alt="Logo" >
+        <!-- Аватарка и имя пользователя -->
+    <div class="user-profile">
+      <div class="search-container">
+      <input type="text" class="search-input" placeholder="Поиск">
+        <img src="../../img/search.png" alt="Картинка" class="search-icon"> <!-- Картинка -->
+     </div>
+     <img src="../../img/settings.png" alt="Иконка настроек" class="settings-icon">
+     <img src="../../img/avatar.png" alt="Аватар пользователя" class ="avatar">
+     <span class="user-name">Имя пользователя</span>
+     <img src="../../img/chevron-down.png" alt="Иконка шеврон" class="chevron-icon">
+  
+   </div>
+     <hr>
+     <!--Полоска виджетов-->
+    </div>
+    <div class="vidgetLine">
+      <button type="button" data-widget="widget1" class="func" data-target="wnd1"> <img src="../..//img/proizvodstvo.png" class="proizvodstvoImg"> </button>
+      <button type="button" data-widget="widget2" class="func" data-target="wnd2"> <img src="../..//img/finance.png" class="financeImg"> </button>
+      <button type="button" data-widget="widget3"  class="func" data-target="wnd3"> <img src="../..//img/planirovanie.png" class="planirovanieImg"> </button>
+      <button type="button" data-widget="widget4" class="func" data-target="wnd4"> <img src="../..//img/personal.avif" class="personalImg"> </button>
+      <button type="button" data-widget="widget5" class="func activeButton" data-target="wnd5"> <img src="../..//img/Ezhednevnik.png" class="ezhednevnikImg"> </button>
+  </div>
+       <!--Полоска виджетов-->
+  <hr>
+  <!--Область окон-->
+            <div class="vidgetContext">
+                <div class="funcDiscription1" id="wnd1"></div>
+                <div class="funcDiscription2" id="wnd2"></div>
+                <div class="funcDiscription3" id="wnd3"></div>
+                <div class="funcDiscription4" id="wnd4"></div>
+                <div class="funcDiscription5 activeBlock" id="wnd5"></div>
+            </div>
+ <!--Сами виджеты-->
+
+    <div class="widget-container ">
+  <div class="resizable-widget active-widget" id="widget1">
+    <div class="widget-header">
+      <button class="close-button">Close</button>
+    </div>
+
+    <div class="widget-columns">
+      <div class="widget-table-column">
+      <table class="widget-table">
+        <thead>
+          <tr>
+            <th>Кому</th>
+            <th>От кого</th>
+            <th>Статус</th>
+            <th>Дата</th>
+            <th>Тип</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="red-row" data-tooltip="Пояснение для строки 1">
+            <td>Директору</td>
+            <td>Перв. Зам</td>
+            <td>Активно</td>
+            <td>01.01.01</td>
+            <td>Служебная</td>
+          </tr>
+          <tr class="green-row">
+            <td>Перв. зам</td>
+            <td>Директор</td>
+            <td>Активно</td>
+            <td>02.01.01</td>
+            <td>Поручение</td>
+          </tr>
+          <tr class="green-row">
+            <td>Перв. зам</td>
+            <td>Директор</td>
+            <td>Активно</td>
+            <td>02.01.01</td>
+            <td>Поручение</td>
+          </tr>
+          <tr  class="yellow-row">
+            <td>Перв. зам</td>
+            <td>Директор</td>
+            <td>Активно</td>
+            <td>02.01.01</td>
+            <td>Поручение</td>
+          </tr>
+          <!-- Добавьте другие строки с данными -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="widget-text-column">
+
+      <div class="widget-text-top">
+        <h4>Уважаемый ……!!!</h4>
+        <p>Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          
+        </p>
+      </div>
+      <div class="widget-text-bottom">
+        <div class="file-panel">
+          <h4>Файл</h4>
+          <img src="your-image-path.png" alt="pdf">
+        </div>
+      </div>
+    </div>
+
+ <!--нижняя панель управления виджетом-->
+  </div>
+  <div class="widget-images-panel">
+    <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
+    <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
+    <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
+    <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
+     <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
+  </div>
+
+    <div class="resize-handle"></div>
+
+
+  </div>
+ <!--виджеты виджеты 2 и 3-->
+
+  <div class="resizable-widget" id="widget2">
+    <div class="widget-header">
+      <button class="close-button">Close</button>
+    </div>
+        <div class="widget-content">
+            <!-- Widget content goes here -->
+            <h2 class="widget-heading">Перечень файлов от проектантов</h2>
+            <div class="main-container">
+                <div class="kanban-container">
+                    <div class="kanban-column">
+                        <div class="column-title">To Do (<span class="task-count">0</span>)</div>
+                        <ul class="task-list">
+                            <li class="task-item">
+                                Задача 1
+                            </li>
+                            <li class="task-item">
+                                Задача 2
+                            </li>
+                            <li class="task-item">
+                                Задача 3
+                            </li>
+                            <!-- Добавьте дополнительные задачи по аналогии -->
+                        </ul>
+                    </div>
+                    <div class="kanban-column">
+                        <div class="column-title">In Progress (<span class="task-count">0</span>)</div>
+                        <ul class="task-list">
+                            <!-- Здесь будут задачи в работе -->
+                            <li class="task-item">
+                                Задача 4
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="kanban-column">
+                        <div class="column-title">Done (<span class="task-count">0</span>)</div>
+                        <ul class="task-list">
+                            <!-- Здесь будут выполненные задачи -->
+                            <li class="task-item">
+                                Задача 5
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-info">
+                    <!-- Здесь будет информация о задачах -->
+                    <div class="widget-text-top">
+                        <h4></h4>
+                        <p>
+                            Текст
+                            file.pdf
+                        </p>
+                   </div>
+                   <div class="widget-text-bottom">
+                       <div class="task-actions">
+                            <button class="task-action">Проверка</button>
+                            <button class="task-action">Загрузка</button>
+                            <button class="task-action">Удалить</button>
+                            <button class="task-action">Перенести задачу</button>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    <div class="resize-handle"></div>
+  </div>
+
+<!--виджет 3-->
+  <div class="resizable-widget" id="widget3">
+    <div class="widget-header">
+      <button class="close-button">Close</button>
+    </div>
+    <div class="widget-content">
+
+      <!-- Widget content goes here -->
+      <h2 class="widget-heading">Список вопросов</h2>
+        <ul class="question-list">
+            <li>
+                <div class="question-title">Как улучшить производственный процесс?</div>
+                <div class="question-details">Цех: Цех 1, Ответ: Ожидается</div>
+            </li>
+            <li>
+                <div class="question-title">Какие новые материалы можно применить?</div>
+                <div class="question-details">Цех: Цех 2, Ответ: Отправлен</div>
+            </li>
+            <li>
+                <div class="question-title">План обновления оборудования</div>
+                <div class="question-details">Цех: Цех 3, Ответ: Принят</div>
+            </li>
+            <!-- Добавьте дополнительные вопросы по аналогии -->
+        </ul>
+        <div class="button-container">
+            <button class="action-button">Ответить цеху</button>
+            <button class="action-button">Создать вопрос</button>
+            <button class="action-button">Отправить вопрос проектанту</button>
+            <button class="action-button">Редактировать</button>
+        </div>
+    </div>
+
+    <div class="resize-handle"></div>
+  </div>
+
+</div>
+</div>
+
+</body>
+<script src="../scripts/directorScript_v2.js"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css"rel="stylesheet" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<!-- <script src="scripts/WorkshopTask.js"></script>  -->
+</html>

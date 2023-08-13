@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Страница</title>
+    <script>
+        function switchPage() {
+            var currentPage = parseInt(document.getElementById('current-page').value);
+            var totalPages = parseInt(document.getElementById('total-pages').value);
+            var nextPage = (currentPage + 1) % totalPages;
+
+            document.getElementById('iframe-container').src = '/show_pages/' + nextPage;
+
+            document.getElementById('current-page').value = nextPage;
+        }
+
+        // Запуск переключения страницы через интервал времени (в данном случае 2 секунды)
+        setInterval(switchPage, 2000);
+    </script>
+</head>
+<body>
+    <input type="hidden" id="current-page" value="0">
+<input type="hidden" id="total-pages" value="{{ total_pages }}">
+    <div id="iframe-container">
+        <iframe src="{{ page_files[0] }}" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+</body>
+</html>

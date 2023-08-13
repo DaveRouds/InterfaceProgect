@@ -1,0 +1,17 @@
+.workshop {
+    margin-bottom: 20px;
+  }
+  
+  .workshop-title, .project {
+    cursor: pointer;
+  }
+  
+  .projects, .sub-projects {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  .projects.active, .sub-projects.active {
+    display: block;
+  }

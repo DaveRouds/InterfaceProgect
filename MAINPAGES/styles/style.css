@@ -1,0 +1,687 @@
+.h-1 {
+  font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+  font-size: 36px; /* Размер шрифта 36px */
+  color: white; /* Белый цвет шрифта */
+  text-align: center; /* Выравнивание текста по центру */
+  margin-top: 120px; /* Отступ от верха 320px */
+}
+.p {
+  font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+  font-size: 24px; /* Размер шрифта 24px */
+  color: gray; /* Серый цвет шрифта */
+  text-align: center; /* Выравнивание текста по центру */
+  margin-top: 30px; /* Отступ от верхней надписи в 50px */
+}
+
+.text-wrapper {
+  position: absolute;
+  top: 80px;
+  left: 140px;
+  font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+  font-weight: 600; /* Полужирный (semibold) */
+  font-size: 40px; /* Размер шрифта 40px */
+  color: white; /* Белый цвет шрифта */
+}
+body {
+  background-image: url("../../img/backround_2.png"); /* Замените путь_к_вашей_картинке.jpg на путь к вашей картинке */
+  background-repeat: no-repeat; /* Отключаем повторение картинки по вертикали и горизонтали */
+  background-size: cover; /* Масштабируем картинку так, чтобы она заполняла весь задний фон */
+  font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+}
+.cursor {
+  width: 30px;
+  height: 30px;
+  background-image: url('../svg/hand.png');
+  background-size: cover;
+  position: absolute;
+  left: 110;
+  top: 110;
+  opacity: 1;
+
+
+}
+
+
+.logo {
+  /* Укажите размеры вашего логотипа */
+  width: 50px;
+  height: 70px;
+  
+  /* Добавляем отступы слева и сверху */
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.logo-2 {
+  /* Укажите размеры вашего логотипа */
+  width: 50px;
+  height: 70px;
+  top: 40px;
+  right: 40px;
+  position:  absolute;
+  
+  /* Добавляем отступы слева и сверху */
+
+}
+.view-2 {
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Выравнивание текста по центру */
+  margin-top: 30px; /* Отступ сверху 30px */
+
+}
+.login-field,
+.password-field {
+  display: block;
+  margin-top: 30px;
+  width: 300px; /* Задаем ширину полей ввода */
+  height: 30px; /* Задаем высоту полей ввода */
+  font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+  font-size: 18px; /* Размер шрифта 18px */
+  padding: 5px 10px; /* Добавляем внутренние отступы для текста внутри поля */
+  border-radius: 10px; /* Скругление углов поля */
+
+}
+.login-button{
+margin-top: 30px;
+width: 320px; /* Задаем ширину полей ввода */
+height: 40px; /* Задаем высоту полей ввода */
+font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+font-size: 18px; /* Размер шрифта 18px */
+padding: 5px 10px; /* Добавляем внутренние отступы для текста внутри поля */
+border-radius: 10px; /* Скругление углов поля */
+/* Новые стили для кнопки "Вход" */
+  background-color: #aaa; /* Серый цвет фона */
+  color: #fff; /* Белый цвет текста */
+  border: none; /* Убираем границу */
+  cursor: pointer; /* Делаем курсор при наведении */
+
+}
+.login-button:hover {
+  background-color: green; /* Серый цвет фона при наведении */
+}
+/* ... Ваши стили ... */
+.login-button-highlight {
+  background-color: green; /* Новый цвет фона при подсветке */
+}
+.password-field {
+  margin-top: 30px; /* Отступ сверху 30px */
+}
+
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Страница директора*№№№№№№№№№№№№№№№№№№№/
+
+/* Стили для сайдбара */
+.sidebar {
+      width: 80px;
+      height: 100vh; /* Растягиваем сайдбар на всю высоту окна браузера */
+      background-color: #f0f0f0; /* Цвет фона сайдбара */
+      position: fixed; /* Фиксируем сайдбар */
+      left: 0; /* Располагаем слева */
+      top: 0; /* Располагаем вверху */
+      text-align: center; /* Выравнивание содержимого по центру */
+      padding-top: 40px; /* Отступ сверху */
+      background-image: url("../../img/Backround_2.png");
+      border-radius: 20px;
+      transition: width 0.5s;
+    }
+.sidebar img {
+      width: 50px; /* Задаем ширину изображения */
+      height: 70px; /* Задаем высоту изображения */
+      margin-bottom: 20px; /* Отступ снизу изображения */
+    }
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc; /* Цвет серых кружков */
+  position: absolute;
+  top: 35%;
+  left: 25px;
+
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Устанавливаем z-index, чтобы кружки были под изображениями */
+}
+.circle-2 {
+
+  width: 220px;
+  height: 50px;
+  background-color: #ccc; /* Цвет серых кружков */
+  position: absolute;
+  border-radius: 20px;
+  bottom:7Px;
+  left: 5px;
+  z-index: -1;
+  opacity: 0; /* Начальное значение прозрачности 0 */
+  transition: opacity 0.4s; /* Плавный переход для изменения прозрачности */
+
+
+}
+
+.icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.icon-container img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  z-index: 1; /* Поднимаем изображения над фоновым кружком */
+}
+
+.sidebar-text {
+   font-size: 20px; /* Устанавливаем размер шрифта 30px */
+  font-weight: bold; /* Делаем текст полужирным */
+  margin-left: 20px;
+  margin-top: -15px;
+  color: #444;
+  opacity: 0; /* Устанавливаем начальное значение прозрачности 0 */
+  transition: opacity 0.3s;
+
+
+}
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили панели виджетов*№№№№№№№№№№№№№№№№№№№*/
+.vidgetLine{
+  display: flex;
+  padding: 1% 0px 0px 3%;
+  gap: 20px;
+}
+
+.vidgetLine button{
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2.5px solid black;
+  border-radius: 10px;
+}
+
+.vidgetContext{
+  width: 95%;
+  height: 80%;
+  margin: auto;
+  padding-top: 15px;
+  overflow: hidden;
+}
+
+.vidgetLine .activeButton{
+  background-color: #71DC7B;
+}
+
+.vidgetContext .activeBlock{
+  display: block;
+}
+
+.proizvodstvoImg{
+  scale: 1;
+  width: 143.5%;
+  height: 100%;
+  right: 5px;
+  bottom: 0px;
+  position: relative;
+}
+
+.financeImg{
+  scale: 1;
+  width: 143.5%;
+  height: 100%;
+  right: 5px;
+  bottom: 0px;
+  position: relative;
+}
+
+.planirovanieImg{
+  scale: 1;
+  width: 143.5%;
+  height: 100%;
+  right: 5px;
+  bottom: 0px;
+  position: relative;
+}
+
+.personalImg{
+  scale: 1;
+  width: 143.5%;
+  height: 100%;
+  right: 5px;
+  bottom: 0px;
+  position: relative;
+}
+
+.ezhednevnikImg{
+  scale: 1;
+  width: 143.5%;
+  height: 100%;
+  right: 5px;
+  bottom: 0px;
+  position: relative;
+}
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили пользователя*№№№№№№№№№№№№№№№№№№№*/
+.user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  position: absolute;
+  top: 40px;
+  right: 130px; /* Позиция слева от logo-2 */
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-family: "RobotoFlex", sans-serif;
+  font-size: 16px;
+  color: #686868; /* Цвет имени пользователя */
+  
+}
+.chevron-icon {
+  width: 20px; /* Ширина иконки */
+  height: 20px; /* Высота иконки */
+  margin-left: 5px; /* Отступ слева от имени пользователя */
+}
+.settings-icon {
+  width: 20px; /* Ширина левого изображения */
+  height: 20px; /* Высота левого изображения */
+  margin-right: 15px; /* Отступ справа от левого изображения */
+}
+.search-input {
+  width: 200px; /* Ширина строки поиска */
+  height: 10px; /* Высота строки поиска */
+  padding: 5px; /* Внутренние отступы для текста внутри поля */
+  font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+  font-size: 14px; /* Размер шрифта */
+  border-radius: 10px; /* Скругление углов поля */
+  margin-right: 25px;
+}
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-icon {
+  width: 20px; /* Ширина картинки */
+  height: 20px; /* Высота картинки */
+  position: absolute;
+  right: 30px; /* Отступ справа от контейнера поиска */
+}
+
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили  карты завода*№№№№№№№№№№№№№№№№№№№*/
+
+.workshop-map-container-2 {
+
+  position: relative;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-top: 10px;
+   max-width: 1920px; /* Максимальная ширина контейнера */
+  max-height: 1080px; /* Максимальная высота контейнера */
+   min-height: 640px; /* Максимальная высота контейнера */
+    min-widtht: 1480px; /* Максимальная высота контейнера */
+  width: 90%;
+  height: 80%;
+  margin-left: 100px; /* Ширина сайдбара + отступ слева */
+  margin-top: 20px; /* Отступ сверху */
+  transition: width 0.3s, height 0.3s;
+  border: 1px solid #ccc;
+
+}
+.workshop-map-container {
+  display: none;
+  position: relative;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-top: 10px;
+   max-width: 1920px; /* Максимальная ширина контейнера */
+  max-height: 1080px; /* Максимальная высота контейнера */
+   min-height: 640px; /* Максимальная высота контейнера */
+    min-widtht: 1480px; /* Максимальная высота контейнера */
+  width: 90%;
+  height: 80%;
+  margin-left: 100px; /* Ширина сайдбара + отступ слева */
+  margin-top: 20px; /* Отступ сверху */
+  transition: width 0.3s, height 0.3s;
+  border: 1px solid #ccc;
+
+}
+@media (max-width: 768px) {
+  #workshop-map-container {
+    width: 90%;
+    max-width: 100%; /* Максимальная ширина контейнера при сжатии окна */
+    margin-left: 5%;
+  }
+}
+
+/* Медиа-запрос для адаптации контейнера при увеличении размера страницы */
+@media (min-width: 1200px) {
+  #workshop-map-container {
+    width: 90%; /* Контейнер будет занимать 80% ширины страницы */
+  }
+}
+.workshop-map-container.open {
+  display: block;
+}
+
+/* стили цехов */
+
+.workshop {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ccc; /* Цвет квадрата цеха */
+  border: 2px solid #aaa;
+
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+}
+  /* Стили для надписи "Карта завода" */
+    .map-title {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 24px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    /* Стили для управляющих элементов */
+    .controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .control-btn {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: #ccc;
+      border: 1px solid #999;
+      border-radius: 50%;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+
+
+.workshop-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+   font-size: 18px;
+}
+
+.workshop-employees {
+  color: gray;
+  text-stroke: 1px white; /* Внешняя обводка */
+}
+.workshop-green {
+  background-color: green; /* Зеленый цех */
+}
+
+.workshop-red {
+  background-color: red; /* Красный цех */
+}
+
+.workshop-yellow {
+  background-color: yellow; /* Желтый цех */
+}
+
+.topBar{
+
+
+  height: 5%;
+  display: inline-flex;
+  width: 100%;
+}
+
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили  Проектов*№№№№№№№№№№№№№№№№№№№№№№№№№№/ */
+
+
+
+.ProjectIcon {
+  width: 180px;
+  height: 80px;
+  border: 2px solid black;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  outline: 2px solid gray;
+}
+
+.ProjectMap{
+  width: 92%;
+  padding: 20px;
+  height: 570px;
+  background-color: transparent;
+
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.lineOfProject{
+  display: flex;
+  flex-direction: row;
+  height: 82px;
+  gap: 61.5px;
+  width: 100%;
+}
+
+.ProjectMap .lineOfProject:nth-child(2){
+
+  .equipmentIcon:nth-child(2){
+      margin-left: 54vh;
+  }
+
+}
+
+.ProjectMap .lineOfProject:nth-child(3){
+
+  .equipmentIcon:nth-child(2){
+      margin-left: 27vh;
+  }
+
+}
+
+.ProjectMap .lineOfProject:nth-child(4){
+
+  .equipmentIcon:nth-child(1){
+      margin-left: 27vh;
+  }
+
+}
+
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили  Задачи*№№№№№№№№№№№№№№№№№№№№№№№№№№/ */
+
+.WorkshopDiv{
+  display: block;
+  flex-direction: column;
+  background: #AC91FA;
+  width: 120rem;
+  height: 62rem;
+  position: absolute;
+  left:6rem;
+  border-radius: 3rem;
+}
+.TaskDiv{
+  border-radius: 3rem;
+  border: 0.1rem solid black;
+  width: 61rem;
+  height: 45rem;
+  position: relative;
+  top: 1rem;
+  left: 3rem;
+  overflow: hidden;
+}
+.TaskInfoDiv{
+  border-radius: 3rem;
+  border: 0.1rem solid black;
+
+  width: 38rem;
+  height: 45rem;
+  position: relative;
+  top: 1rem;
+  left:4rem;
+  display: none;
+}
+.TaskInfoDiv.active{
+  display: block;
+}
+.TaskTitleText{
+  text-align: center;
+  font-weight: lighter;
+  font-weight: bold;
+}
+.TaskWorkShop, .TaskWorkShopList, .TaskWorkShopTask, .TaskExecutorInfo{
+  border-radius: 0.5rem;
+  border: 0.3rem solid #FFFFFF;
+  background:#FFFFFF;
+  display: flex;
+  align-items: left;
+  margin-bottom: 0.15rem;
+  position: relative;
+  cursor: pointer;
+  height: 2rem;
+}
+
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+  margin-right: 4rem;
+  z-index: 2;
+}
+
+.dropbtn1 {
+  background-color: white;
+  color: black;
+  border-radius: 1rem;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 20rem;
+  height: 3rem;
+}
+
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #AC91FA;
+  border-radius: 1rem;
+  min-width: 20rem;
+}
+
+.dropdown-content1 a {
+  color: black;
+  cursor: pointer;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {display:block;}
+
+.chooseTask{
+  border-radius: 1rem;
+}
+
+.sub-projects1 p{
+  margin-right:10rem;
+}
+.textAreaDiv textarea{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  background-color: #715CEE;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.TaskExecutorInfo{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.TaskExecutorInfo p{
+  margin-right: 10rem;
+  font-weight:bold;
+  font-size: large;
+}
+.TaskDataExecutorInfo{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+.TaskDataExecutorInfo p{
+  margin-right: 3rem;
+  margin-left: 2rem;
+  font-size: large;
+}
+.TaskBasicText{
+  font-size: large;
+}
+.WhiteTask{
+  background-color: white;
+  border-color: white;
+}
+.GreenTask{
+  background-color: #71DC7B;
+  border-color: #71DC7B;
+}
+.YellowTask{
+  background-color: #FEF406;
+  border-color: #FEF406;
+}
+.RedTask{
+  background-color: #FB6161;
+  border-color: #FB6161;
+}
+.GrayInfo{
+  background-color: #ece8e8;
+  border-color: #ece8e8;
+}
+.BlueInfo{
+  background-color: #6dbdeb;
+  border-color: #6dbdeb;
+}
+.projects1, .sub-projects1, .sub-task-projects1, .tasks-info, .states {
+display: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.projects1.active, .sub-projects1.active, .sub-task-projects1.active, .tasks-info.active, .states.active {
+display: block;
+}
