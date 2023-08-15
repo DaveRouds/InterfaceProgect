@@ -301,6 +301,10 @@
       display: flex;
   }
 
+  .widget-container{
+      display: flex;
+  }
+
   .task-info {
       flex: 1;
       padding: 10px;
