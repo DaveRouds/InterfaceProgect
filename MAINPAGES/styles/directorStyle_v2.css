@@ -1,0 +1,331 @@
+
+  .widget-header {
+    background-color: #ddd;
+    padding: 8px;
+    cursor: move;
+    display: flex;
+    justify-content: flex-end; /* Выравнивание элементов по правому краю */
+    padding: 10px;
+  }
+  
+
+  .resizable-widget {
+    flex: 1; /* Равномерное распределение пространства между виджетами */
+    position: relative;
+
+    min-width: 400px;
+    min-height: 600px;
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    margin-right: 10px; /* Добавляем немного отступа между виджетами */
+  }
+  
+  /* Дополнительный стиль для кнопок закрытия */
+  .close-button {
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .resize-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    cursor: nwse-resize; /* Resize cursor */
+    background-color: #000;
+  }
+
+
+  .widget-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 150px;
+    padding: 10px;
+  }
+  
+  .widget-container {
+    /* display: flex;
+    flex-direction: row; Элементы будут располагаться в горизонтальном ряду */
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .resizable-widget {
+    display: none;
+  }
+  
+  .active-widget {
+    display: block;
+  }
+
+  /* Стилизация таблицы */
+  .widget-table {
+    width: 100%; /* Занимает половину ширины виджета */
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 10px; /* Добавляем скругление краев */
+  }
+  
+  .widget-table th,
+  .widget-table td {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .widget-table th {
+    background-color: #f0f0f0;
+  }
+  
+  /* Убираем границы */
+  .widget-table th,
+  .widget-table td {
+    border: none;
+  }
+  .red-row {
+    background-color: rgb(231, 130, 130);
+  }
+  
+  .green-row {
+    background-color: rgb(118, 243, 118);
+  }
+  
+  .yellow-row {
+    background-color: rgb(243, 243, 117);
+  }
+
+
+  .widget-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+
+  .widget-columns {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .widget-table-column {
+    width: 60%;
+    overflow: auto; /* Добавляем прокрутку при необходимости */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px; /* Скругление углов */
+    border: 1px solid #ccc; /* Обводка */
+    height: 80%; /* Добавляем высоту 100% */
+    
+
+  }
+  
+  .widget-text-column {
+ 
+    width: 39%;
+    padding: 10px;
+    
+    box-sizing: border-box;
+
+    border-radius: 10px; /* Скругление углов */
+    border: 1px solid #ccc; /* Обводка */
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    height: 80%; /* Добавляем высоту 100% */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Изменяем направление флекс-контейнера */
+    
+  }
+  .widget-text-top {
+    padding-bottom: 10px; /* Отступ снизу */
+  }
+  
+  .widget-text-bottom {
+    flex-grow: 1; /* Занимает оставшееся пространство */
+    overflow: hidden; /* Добавляем прокрутку при необходимости */
+  }
+  .widget-text-content {
+    flex-grow: 1; /* Занимает половину высоты */
+    padding: 10px; /* Добавляем отступ внутри .widget-text-column */
+  }
+
+  .widget-images-panel {
+    width: 10%; /* Здесь ваша ширина для панели с картинками */
+    border: 1px solid #ccc;
+    background-color: #ffffff; /* Здесь ваш цвет фона */
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px; /* Добавляем отступ снизу */
+    display: flex; /* Используем flex-контейнер */
+    align-items: center; /* Выравниваем по центру вертикально */
+    justify-content: flex-start; /* Выравниваем по левому краю горизонтально */
+
+  }
+
+  .file-panel {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Начало виджетов для конструктора */
+
+  /* Виджет перечень файлов от проектантов */
+    .kanban-container {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      flex: 0 0 60%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-left: 10px;
+  }
+  .kanban-column {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      margin: 0 10px;
+  }
+  .column-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+  .task-list {
+      list-style-type: none;
+      padding: 0;
+  }
+  .task-item {
+      position: relative;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      cursor: pointer;
+  }
+  .task-item:hover {
+      background-color: #e1e1e1;
+  }
+  .task-details {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 300px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+  }
+  .task-item:hover .task-details {
+      display: block;
+  }
+  .task-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+  }
+  .task-action {
+      background-color: #ddd;
+      color: #666;
+      cursor: pointer;
+  }
+
+  .task-action:hover {
+      background-color: #f0f0f0; /* Цвет подсветки при наведении */
+  }
+  /* Виджет книга вопросов */
+  .question-list {
+      list-style-type: none;
+      padding: 10px;
+  }
+  .question-list li:hover {
+      background-color: #f0f0f0; /* Цвет подсветки при наведении */
+  }
+  .question-list li {
+      margin-bottom: 10px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      cursor: pointer;
+  }
+  .question-title {
+      font-weight: bold;
+      padding-left: 10px;
+  }
+  .question-details {
+      font-size: 12px;
+      color: #666;
+      padding-left: 10px;
+  }
+
+  .widget-heading {
+    padding-left: 10px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .action-button {
+    padding: 8px 12px;
+    background-color: #ddd;
+    color: #666;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .action-button:hover {
+      background-color: #f0f0f0; /* Цвет подсветки при наведении */
+  }
+
+  .main-container {
+      display: flex;
+  }
+
+  .task-info {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin: 0 10px;
+      display: none;
+  }
+
+    .task-info.active {
+        display: block;
+    }
+
+    .task-info h4 {
+        margin-top: 0;
+    }
+
+    /* Стили для названия задачи */
+    .task-item {
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .task-item.active {
+        background-color: #a7e6a4;
+    }
+
+/* Конец стилей для конструктора */
